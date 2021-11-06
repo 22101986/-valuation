@@ -2,9 +2,10 @@ const divResult = document.querySelector("#result");
 
 
 let array = [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0]
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
 ];
 
 let resultArray = randomArray();
@@ -26,9 +27,9 @@ function displayArray() {
         element += "<div>"
         for(var j = 0; j < array[i].length; j++) {
             if(array[i][j] === 0){
-            element += "<button class='btn btn-danger m-3' style='width:110px;height:110px'onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
+            element += "<button class='btn btn-danger m-2' style='width:110px;height:120px'onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
             }else {
-                element += "<img src='"+ getImage(array[i][j])+"' style='width:110px;height:110px' class='m-3'>"; 
+                element += "<img src='"+ getImage(array[i][j])+"' style='width:110px;height:120px' class='m-2'>"; 
             }        
         }
         element += "</div>";
@@ -96,9 +97,9 @@ function randomArray() {
     let position = [0, 0, 0, 0, 0, 0];
 
 
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < 4; i++){
         let arrRow = [];
-        for(let j = 0; j < 4; j++){
+        for(let j = 0; j < 3; j++){
             let end = false;
 
           while(!end) {
