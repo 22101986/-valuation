@@ -1,4 +1,4 @@
-const divResult = document.querySelector("#result");
+let divResult = document.querySelector("#result");
 
 
 let array = [
@@ -9,14 +9,9 @@ let array = [
 ];
 
 let resultArray = randomArray();
- 
-
 let lastClick = [];
-let nbAffiche = 0;
+let number = 0;
 let ready = true;
-
-
-
 
 displayArray();
 
@@ -27,9 +22,9 @@ function displayArray() {
         element += "<div>"
         for(var j = 0; j < array[i].length; j++) {
             if(array[i][j] === 0){
-            element += "<button class='btn btn-danger m-2' style='width:110px;height:120px'onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
+            element += "<button class='btn btn-danger m-2' style='width:150px;height:150px'onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
             }else {
-                element += "<img src='"+ getImage(array[i][j])+"' style='width:110px;height:120px' class='m-2'>"; 
+                element += "<img src='"+ getImage(array[i][j])+"' style='width:150px;height:150px' class='m-2'>"; 
             }        
         }
         element += "</div>";
@@ -60,7 +55,7 @@ function getImage(value){
 }
 function verif(button) {
    if(ready) {
-    nbAffiche++;
+    number++;
 
     let row = button.substr(0,1);
     let column = button.substr(2,1);
@@ -68,7 +63,7 @@ function verif(button) {
     array[row][column] = resultArray[row][column];
     displayArray();
 
-    if(nbAffiche > 1) {
+    if(number > 1) {
         ready = false;
         
         setTimeout(() => {
@@ -79,10 +74,10 @@ function verif(button) {
             }
             displayArray();
             ready = true;
-            nbAffiche = 0;
+            number = 0;
             lastClick = [row, column];
 
-        },1000)
+        },750)
 
      }else {
         lastClick = [row, column];
@@ -96,7 +91,6 @@ function randomArray() {
 
     let position = [0, 0, 0, 0, 0, 0];
 
-
     for(let i = 0; i < 4; i++){
         let arrRow = [];
         for(let j = 0; j < 3; j++){
@@ -109,12 +103,10 @@ function randomArray() {
                 position[randomImage]++;
                 end = true;
             }
-           
           }
         }
-
         arr.push(arrRow);
     }
-
     return arr;
 }
+

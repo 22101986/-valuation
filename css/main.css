@@ -83,9 +83,26 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.backGround {
+  background-image: url("img/images.jpg");
+}
+
+.police {
+  font-family: 'Fruktur', cursive; 
+  color:#DC3545;
+}
+.color {
+  background-color:black;
+}
+.size {
+  width: 120px;
+  height: 120px;
+}
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
