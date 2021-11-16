@@ -103,7 +103,6 @@ textarea {
    width: 120px;
    height: 120px;
  }
-
  }
  @media (min-width: 1000px) {
    .size {
@@ -113,8 +112,8 @@ textarea {
  }
  @media (max-width: 345px) {
    .size {
-     width: 75px;
-     height: 75px;
+     width: 70px;
+     height: 70px;
    }
  }
 
