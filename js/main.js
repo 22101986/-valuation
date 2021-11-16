@@ -22,9 +22,9 @@ function displayArray() {
         element += "<div>"
         for(var j = 0; j < array[i].length; j++) {
             if(array[i][j] === 0){
-            element += "<button class='btn btn-danger m-2' style='width:150px;height:150px'onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
+            element += "<button class='btn btn-danger m-2 size' onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
             }else {
-                element += "<img src='"+ getImage(array[i][j])+"' style='width:150px;height:150px' class='m-2'>"; 
+                element += "<img src='"+ getImage(array[i][j])+"' class='m-2 size'>"; 
             }        
         }
         element += "</div>";
