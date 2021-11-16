@@ -22,7 +22,7 @@ function displayArray() {
         element += "<div>"
         for(var j = 0; j < array[i].length; j++) {
             if(array[i][j] === 0){
-            element += "<button class='btn btn-danger m-2 size' onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
+            element += "<button class='btn btn-danger m-2 size button' onclick='verif(\""+i+"-"+j+"\")'><h1>?</h1></button>";
             }else {
                 element += "<img src='"+ getImage(array[i][j])+"' class='m-2 size'>"; 
             }        
@@ -53,6 +53,12 @@ function getImage(value){
     return newElement;
 
 }
+
+function youWin() {
+    if(array.join("") === resultArray.join("")) {
+        alert("BRAVO Vous avez gagné!!! Pour rejouer raffraîchir la page...");
+    }
+}
 function verif(button) {
    if(ready) {
     number++;
@@ -62,6 +68,7 @@ function verif(button) {
 
     array[row][column] = resultArray[row][column];
     displayArray();
+    
 
     if(number > 1) {
         ready = false;
@@ -73,10 +80,12 @@ function verif(button) {
     
             }
             displayArray();
+            youWin();
             ready = true;
             number = 0;
             lastClick = [row, column];
-
+            console.log(resultArray)
+            
         },750)
 
      }else {

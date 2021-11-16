@@ -105,6 +105,18 @@ textarea {
  }
 
  }
+ @media (min-width: 1000px) {
+   .size {
+     width: 175px;
+     height: 175px;
+   }
+ }
+ @media (max-width: 345px) {
+   .size {
+     width: 75px;
+     height: 75px;
+   }
+ }
 
 
 
