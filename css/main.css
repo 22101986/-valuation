@@ -83,40 +83,93 @@ textarea {
   resize: vertical;
 }
 
+#image {
+  background-image: url("../background.png");
+
+}
+
+
 .backGround {
   background-image: url("img/images.jpg");
 }
 
 .police {
-  font-family: 'Fruktur', cursive; 
-  color:#DC3545;
+  font-family: 'Bungee Spice', cursive;
+  color: #ab0a30bf;
 }
+
 .color {
-  background-color:black;
+  background-color: black;
 }
+
+
+.format {
+  width: 90px;
+  height: 90px;
+  background-color: #000;
+
+}
+
+.layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
 .size {
   width: 90px;
   height: 90px;
 }
- @media (min-width: 600px) {
- .size {
-   width: 120px;
-   height: 120px;
- }
- }
- @media (min-width: 1000px) {
-   .size {
-     width: 175px;
-     height: 175px;
-   }
- }
- @media (max-width: 345px) {
-   .size {
-     width: 70px;
-     height: 70px;
-   }
- }
 
+
+@media (min-width: 600px) {
+  .size {
+    width: 120px;
+    height: 120px;
+  }
+
+  .format {
+    width: 100px;
+    height: 100px;
+  }
+
+  .adjust {
+    height: 100px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .size {
+    width: 150px;
+    height: 150px;
+  }
+
+  .format {
+    width: 110px;
+    height: 110px;
+  }
+
+  .adjust {
+    height: 300px;
+  }
+}
+
+@media (max-width: 345px) {
+  .size {
+    width: 50px;
+    height: 50px;
+  }
+
+  .format {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 
 
@@ -214,9 +267,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -227,6 +280,7 @@ textarea {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -294,4 +348,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
